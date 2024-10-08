@@ -1,7 +1,8 @@
 # GoldenBites
+
 Project on a web application to make food reservations in a kitchen of a residence of older adults
 
-# Introduction
+## Introduction
 
 Senior residences normally include breakfast, lunch and dinner in their accommodation service, additionally, they also offer differentiated food service for breakfast, lunch and dinner, that is, food dishes that are not established in the common daily menu, so it is necessary for the kitchens of the residences to prepare additional food based on the orders of their guests.
 
