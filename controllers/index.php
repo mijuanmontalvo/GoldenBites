@@ -1,5 +1,4 @@
 <?php
 
-
-
-echo "test 1";
+$heading = "Home";
+require "views/index.view.php";
