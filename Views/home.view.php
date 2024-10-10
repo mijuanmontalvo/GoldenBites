@@ -1,8 +1,11 @@
+  <!-- header -->
 <?php require('partials/head.php')?> 
+  <!-- navigation -->
+<?php require('partials/nav.php')?> 
 
 <section class="gallery" >
 
-        <ul class="tripList trips">
+        <ul >
       <li>
         
         <h3>Our Dishes</h3>
