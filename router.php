@@ -5,6 +5,9 @@ $routes =[
     '/'=>'controllers/index.php',
     '/home'=>'controllers/home.php',
     '/registrarcuenta'=>'controllers/registrarcuenta.php',
+    '/ourdishes'=>'controllers/ourdishes.php',
+    '/manageourdishes'=>'controllers/manageourdishes.php',
+    '/addnewdish'=>'controllers/addnewdish.php',
 
 
 ];
