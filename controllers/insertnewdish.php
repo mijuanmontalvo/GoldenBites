@@ -10,7 +10,7 @@ $price = $_POST['price'];
 $image_dish = addslashes(file_get_contents($_FILES['image_dish']['tmp_name']));
 
 // Ejecutar una consulta (query) simple
-$sql = "INSERT INTO food_reservation.dish (Name, Description, Price, Image) 
+$sql = "INSERT INTO goldenbites.dish (Name, Description, Price, Image) 
         values('$name','$description','$price','$image_dish')";
 
 if ($conn->query($sql) === TRUE) {
