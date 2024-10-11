@@ -10,7 +10,7 @@
 <div class="login-container">
     <form action="/controllers/insertar_cuenta.php" method="post">
     <div class="divimage">
-            
+    <img src="images/logo2.png" alt="MAR logo" class="logo">
             </div>
     <h1>Register account</h1> 
     <hr>   

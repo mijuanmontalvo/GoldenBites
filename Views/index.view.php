@@ -15,6 +15,7 @@
 
             <form name="frmLogin" method="post">
             <div class="divimage">
+            <img src="images/logo2.png" alt="MAR logo" class="logo">
             </div>
             <h1>Log in</h1> 
             <hr>   
