@@ -27,23 +27,12 @@
   </tr>
  
 <?php
- /*   $servername = "localhost";
-    $username = "food_reservation";
-    $password = "1234";
-    $dbname = "food_reservation";
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-  die("Conexión fallida: " . $conn->connect_error);
-}*/
 
 include 'db_connect.php';
 
 $userID=$_SESSION['ID'];
-// Consulta para seleccionar todos los datos de la tabla
+
 $sql = "SELECT 
 r.ID as ID,
 u.ID as UserID,
@@ -56,7 +45,7 @@ r.Estate as Estate
 FROM reservation r
 JOIN user u ON r.UserID = u.id
 JOIN dish d ON r.DishID = d.id
-WHERE UserID = 'user1'
+WHERE UserID = '$userID'
 ORDER BY ID desc;";
 $result = $conn->query($sql);
 
