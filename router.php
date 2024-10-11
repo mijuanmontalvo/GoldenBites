@@ -5,14 +5,18 @@ $routes =[
     '/'=>'controllers/index.php',
     '/home'=>'controllers/home.php',
     '/index_process'=>'controllers/index_process.php',
+    '/makereservation'=>'controllers/makereservation.php',
     '/registrarcuenta'=>'controllers/registrarcuenta.php',
     '/ourdishes'=>'controllers/ourdishes.php',
     '/manageourdishes'=>'controllers/manageourdishes.php',
     '/addnewdish'=>'controllers/addnewdish.php',
+    '/insertnewdish'=>'controllers/insertnewdish.php',
     '/reservation'=>'controllers/reservation.php',
-    '/makereservation'=>'controllers/makereservation.php',
+    '/reservationkitchen'=>'controllers/reservationkitchen.php',
     '/reservationsmade'=>'controllers/reservationsmade.php',
-
+    '/editdish'=>'controllers/editdish.php',
+    '/inserteditdish'=>'controllers/inserteditdish.php',
+    '/deletedish'=>'controllers/deletedish.php',
 
 ];
 
