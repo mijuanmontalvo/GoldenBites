@@ -8,6 +8,9 @@ $routes =[
     '/ourdishes'=>'controllers/ourdishes.php',
     '/manageourdishes'=>'controllers/manageourdishes.php',
     '/addnewdish'=>'controllers/addnewdish.php',
+    '/reservation'=>'controllers/reservation.php',
+    '/makereservation'=>'controllers/makereservation.php',
+    '/reservationsmade'=>'controllers/reservationsmade.php',
 
 
 ];
