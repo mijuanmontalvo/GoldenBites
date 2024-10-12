@@ -1,0 +1,76 @@
+
+
+/* ############ 1. Global Styles ############ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body > * {
+  font-family: "Lato", sans-serif;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Nunito", sans-serif;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+p {
+  line-height: 1.4;
+}
+
+a {
+  color: #36bae6;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #e06630;
+}
+
+i {
+  padding-left: 0.5rem;
+}
+
+
