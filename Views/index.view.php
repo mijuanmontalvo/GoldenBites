@@ -33,10 +33,11 @@
     </body>
 </html>
 
+<?php
 
+?>
 <?php
 session_start();
-
 
 include 'db_connect.php';
 
@@ -48,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     if ($result->num_rows == 1) {
-        // Inicio de sesión exitoso
+
         $_SESSION['username'] = $username;
         $_SESSION['ID']=$row['ID'];
         $_SESSION['UserType']=$row['UserType'];
@@ -64,9 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
-
-
-
 
 
 ?>

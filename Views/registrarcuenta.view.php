@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food reservation</title>
+    <title>GoldenBites</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="login-container">
     <form action="/controllers/insertar_cuenta.php" method="post">
     <div class="divimage">
-    <img src="images/logo2.png" alt="MAR logo" class="logo">
+            <img src="images/logo2.png" alt="Logo GoldenBites" class="logo">
             </div>
     <h1>Register account</h1> 
     <hr>   
