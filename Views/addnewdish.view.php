@@ -1,10 +1,10 @@
-  <!-- header -->
+<!-- header / hero -->
 <?php require('partials/head.php')?> 
-
   <!-- navigation -->
 <?php require('partials/nav.php')?> 
-
-<section  >
+  <!-- Banner -->
+<?php require('partials/banner.php')?> 
+<section class="gallery" >
         <h2>
         Enter the data of the new plate
             
@@ -29,4 +29,5 @@
   </section>
 
 
+  <!-- Footer -->
 <?php require('partials/footer.php')?>

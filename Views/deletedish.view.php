@@ -1,10 +1,13 @@
- <!-- header -->
+  <!-- header -->
 <?php require('partials/head.php')?> 
- <!-- navigation -->
+  <!-- navigation -->
 <?php require('partials/nav.php')?> 
+  <!-- Banner -->
+<?php require('partials/banner.php') ?> 
 
 <?php 
 include 'db_connect.php';
+
 
 $sql = "DELETE FROM dish where ID=$ID";
 $result = $conn->query($sql);
@@ -24,6 +27,7 @@ $image=base64_encode($image);
 
 ?> 
 
-  <!-- Footer -->
 
+
+  <!-- Footer -->
 <?php require('partials/footer.php')?>

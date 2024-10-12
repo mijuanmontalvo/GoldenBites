@@ -1,10 +1,9 @@
-<?php //session_start();?> 
   <!-- header -->
 <?php require('partials/head.php')?> 
 
   <!-- navigation -->
 <?php require('partials/nav.php')?> 
-  <!-- Trips -->
+  <!-- Baner -->
 <?php require('partials/banner.php')?> 
 
 
@@ -23,10 +22,6 @@
       </li>
 
     </ul>
-
-
-
-
 
     <section class="gallery" >
             <div class="addnewdish">
@@ -52,6 +47,7 @@
  
 <?php
 include 'db_connect.php';
+
 
 $sql = "SELECT ID, name, description, price, image FROM dish order by ID desc";
 $result = $conn->query($sql);
@@ -84,7 +80,9 @@ $conn->close();
 <?php 
 
 
+
+
 ?>
   <!-- Footer -->
-<?php require('partials/footer.php')?>
 
+<?php require('partials/footer.php')?>

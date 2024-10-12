@@ -1,9 +1,9 @@
   <!-- header -->
 <?php require('partials/head.php')?> 
-
   <!-- navigation -->
 <?php require('partials/nav.php')?> 
-
+  <!-- Baner -->
+<?php require('partials/banner.php')?> 
 <section class="gallery" >
         <li>
             <a href="/addnewdish" class="text-blue-500 hover:underline">
@@ -25,17 +25,14 @@
   </tr>
  
 <?php
-// Crear conexión
+
 include 'db_connect.php';
 
 
-
-// Consulta para seleccionar todos los datos de la tabla
 $sql = "SELECT ID, name, description, price, image FROM dish order by ID desc";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // Imprimir los datos en una tabla
   
   while($row = $result->fetch_assoc()) {
     
@@ -59,6 +56,4 @@ $conn->close();
 
 
   <!-- Footer -->
-<!-- Contact Info -->
-<?php //require('partials/footer.contact.php')?>
 <?php require('partials/footer.php')?>

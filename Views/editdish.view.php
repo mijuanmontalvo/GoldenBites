@@ -1,12 +1,13 @@
-  <!-- header --> 
+  <!-- header-->
 <?php require('partials/head.php')?> 
-
   <!-- navigation -->
 <?php require('partials/nav.php')?> 
-
+  <!-- Baner -->
+<?php require('partials/banner.php') ?> 
 
 <?php 
 include 'db_connect.php';
+
 
 $sql = "SELECT ID, name, description, price, image FROM dish where ID=$ID";
 $result = $conn->query($sql);
@@ -22,6 +23,7 @@ $image=base64_encode($image);
     echo "0 resultados";
   }
   $conn->close();
+
 ?> 
 
 <section class="gallery" >
@@ -50,6 +52,7 @@ $image=base64_encode($image);
         </form>
 
   </section>
+
 
   <!-- Footer -->
 <?php require('partials/footer.php')?>

@@ -1,9 +1,9 @@
-<?php // session_start();?> 
+  <!-- header -->
 <?php require('partials/head.php')?> 
-  <!-- header / hero -->
   <!-- navigation -->
 <?php require('partials/nav.php')?> 
-
+  <!-- Baner -->
+<?php require('partials/banner.php')?> 
 <section class="gallery" >
         <li>
             <a href="/makereservation" class="text-blue-500 hover:underline">
@@ -28,11 +28,9 @@
  
 <?php
 
-
 include 'db_connect.php';
 
 $userID=$_SESSION['ID'];
-
 $sql = "SELECT 
 r.ID as ID,
 u.ID as UserID,
@@ -50,7 +48,6 @@ ORDER BY ID desc;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // Imprimir los datos en una tabla
   
   while($row = $result->fetch_assoc()) {
     
@@ -76,6 +73,4 @@ $conn->close();
 
 
   <!-- Footer -->
-<!-- Contact Info -->
-<?php //require('partials/footer.contact.php')?>
 <?php require('partials/footer.php')?>
