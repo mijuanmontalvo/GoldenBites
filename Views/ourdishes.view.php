@@ -1,11 +1,14 @@
- <!-- header -->
+<?php //session_start();?> 
+  <!-- header -->
 <?php require('partials/head.php')?> 
+
   <!-- navigation -->
 <?php require('partials/nav.php')?> 
+  <!-- Trips -->
+<?php require('partials/banner.php')?> 
 
 
-
-<ul class="tripList trips">
+  <ul class="tripList trips">
       <li>
         
         <h3>Review all our dishes</h3>
@@ -48,17 +51,12 @@
   </tr>
  
 <?php
-
 include 'db_connect.php';
-
-
-
 
 $sql = "SELECT ID, name, description, price, image FROM dish order by ID desc";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  
   
   while($row = $result->fetch_assoc()) {
     
@@ -86,7 +84,7 @@ $conn->close();
 <?php 
 
 
-
 ?>
   <!-- Footer -->
 <?php require('partials/footer.php')?>
+

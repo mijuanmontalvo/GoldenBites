@@ -1,8 +1,6 @@
 <?php
-
+session_start();
 include 'db_connect.php';
-
-
 
 $ID = $_POST['ID'];
 $name = $_POST['name'];
@@ -24,8 +22,9 @@ $price = $_POST['price'];
 }
 
 
-if ($conn->query($sql) === TRUE) {
 
+
+if ($conn->query($sql) === TRUE) {
     header("Location: /ourdishes");
     echo "exito";
     exit();

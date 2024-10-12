@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../functions.php';
 $conn = conectarBD();
 
@@ -19,8 +20,6 @@ if ($conn->query($sql) === TRUE) {
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
-
-
 
 $conn->close();
 ?>

@@ -8,11 +8,7 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" href="images/favicon.png">
-  <!-- load font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- load google fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-
+  
   <link rel="stylesheet" href="css/base.css">
 
 </head>
