@@ -22,7 +22,7 @@
         <label>Name</label>
         <input type="text" name="name_usuario" placeholder="Enter your name">
         <label>Room number</label>
-        <input type="text" name="room_number" placeholder="Enter your email">
+        <input type="text" name="room_number" placeholder="Enter your room number">
         <label>Email</label>
         <input type="email" name="email" placeholder="Enter your email">
         <label>Username</label>
