@@ -7,21 +7,7 @@
 <?php require('partials/banner.php')?> 
 
 
-  <ul class="tripList trips">
-      <li>
-        
-        <h3>Review all our dishes</h3>
-        
-        <a href="/manageourdishes">Continue...<i class="fas fa-angle-double-right"></i></a>
-      </li>
-      <li>
-        
-        <h3>Manage our dishes</h3>
-        
-        <a href="/manageourdishes">Continue...<i class="fas fa-angle-double-right"></i></a>
-      </li>
 
-    </ul>
 
     <section class="gallery" >
             <div class="addnewdish">
