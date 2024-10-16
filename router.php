@@ -6,6 +6,7 @@ $routes =[
     '/home'=>'controllers/home.php',
     '/index_process'=>'controllers/index_process.php',
     '/makereservation'=>'controllers/makereservation.php',
+    '/insertar_reservation'=>'controllers/insertar_reservation.php',
     '/registrarcuenta'=>'controllers/registrarcuenta.php',
     '/ourdishes'=>'controllers/ourdishes.php',
     '/manageourdishes'=>'controllers/manageourdishes.php',
@@ -17,6 +18,8 @@ $routes =[
     '/editdish'=>'controllers/editdish.php',
     '/inserteditdish'=>'controllers/inserteditdish.php',
     '/deletedish'=>'controllers/deletedish.php',
+    '/editreservation'=>'controllers/editreservation.php',
+    '/inserteditreservation'=>'controllers/inserteditreservation.php',
 
 ];
 

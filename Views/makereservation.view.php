@@ -28,7 +28,7 @@ $result = $conn->query($sql);
       <h2>Enter your reservation details</h2>
       <br>
 
-      <form action="/controllers/insertar_reservation.php" method="post">
+      <form action="/insertar_reservation" method="post">
       <label for="plato">Name of dish:</label><br>
     <select id="name_dish" name="name_dish">
         <?php
