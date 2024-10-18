@@ -66,7 +66,7 @@ if ($result->num_rows > 0) {
     echo "<td>" . $row['NumberDish'] . "</td>";
     echo "<td>" . $row['Observation'] . "</td>";
     //echo "<td>" . $row['Estate'] . "</td>";
-    echo "<td>" ." <a href=/editreservation?id=$row[Reservation_ID]>Edit</a> | <a href=/deleteresservation?id=$row[Reservation_ID]>Delete</a>" . "</td>";
+    echo "<td>" ." <a href=/editreservation?id=$row[Reservation_ID]>Edit</a> | <a href=/deletereservation?id=$row[Reservation_ID]>Delete</a>" . "</td>";
     echo "</tr>";
   }
 } else {
