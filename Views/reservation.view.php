@@ -9,10 +9,10 @@
   <?php require('partials/banner.php')?> 
 
   <?php
-  echo $_SESSION['UserType']."--";
+ /* echo $_SESSION['UserType']."--";
 
-  echo $_SESSION['ID']."--";
-
+  echo $_SESSION['ID']."--";*/
+$userID=$_SESSION['ID'];
 
 ?>
 
@@ -50,7 +50,8 @@ $sql = "SELECT reservation.ID as Reservation_ID, UserID, DishID, DateReservation
                user.Name as Name_user, dish.Name as Name_Dish 
         FROM reservation, user, dish
         WHERE reservation.userID=user.ID and
-              reservation.dishID=dish.ID
+              reservation.dishID=dish.ID and
+              UserID=$userID
          order by Reservation_ID desc";
 $result = $conn->query($sql);
 

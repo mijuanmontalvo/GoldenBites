@@ -12,13 +12,13 @@
         
         <h3>Our Dishes</h3>
         <p>Here you can check our dishes</p>
-        <a href="/ourdishes">Continue...<i class="fas fa-angle-double-right"></i></a>
+        <a href="/ourdishes">Check out our dishes<i class="fas fa-angle-double-right"></i></a>
       </li>
       <li>
         
         <h3>Reservations</h3>
         <p>Here you can do a reservation and you can review all your reservations.</p>
-        <a href="/reservation">Continue...<i class="fas fa-angle-double-right"></i></a>
+        <a href="/reservation">Check out your reservations<i class="fas fa-angle-double-right"></i></a>
       </li>
 
     </ul>

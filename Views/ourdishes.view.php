@@ -35,7 +35,9 @@
 include 'db_connect.php';
 
 
-$sql = "SELECT ID, name, description, price, image FROM dish order by ID desc";
+$sql = "SELECT ID, name, description, price, image 
+        FROM dish 
+        order by ID desc";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
