@@ -15,7 +15,7 @@ $sql = "INSERT INTO goldenbites.reservation (UserID, DishID, DateReservation, Nu
         values('$userID','$name_dish','$reservation_date','$number_dishes','$observation','$estate')";
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: /reservationsmade");
+    header("Location: /reservation");
     exit();
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

@@ -15,7 +15,7 @@ $sql = "INSERT INTO goldenbites.dish (Name, Description, Price, Image)
 
 if ($conn->query($sql) === TRUE) {
 
-    header("Location: /manageourdishes");
+    header("Location: /ourdishes");
     echo "exito";
     exit();
   } else {
