@@ -19,9 +19,9 @@
         <br>
 <hr>
 <br>
-<h2>Dish Table</h2>
+<h2>List of special dishes</h2>
 <hr>
-<table style="width:100%">
+<table class="table_dish" style="width:100%">
   <tr>
     <th>ID</th>
     <th>Name</th>
@@ -57,6 +57,12 @@ if ($result->num_rows > 0) {
   echo "0 resultados";
 }
 $conn->close();
+
+
+
+
+
+
 ?>
 
 </table>
@@ -66,6 +72,29 @@ $conn->close();
 
     
 <?php 
+include 'db_connect.php';
+$sql = "SELECT ID, name, description, price, image 
+        FROM dish 
+        ORDER BY ID DESC";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  
+  while ($row = $result->fetch_assoc()) {
+    echo "<div class='card_dish'>";
+    echo "<img src='data:image/jpeg;base64," . base64_encode($row['image']) . "' alt='Dish Image' class='card-image'/>";
+    echo "<div class='card_dish-body'>";
+    echo "<h3 class='card_dish-title'>" . $row['name'] . "</h3>";
+    echo "<p class='card_dish-description'>" . $row['description'] . "</p>";
+    echo "<p class='card_dish-price'>$" . number_format($row['price'], 2) . "</p>";
+    echo "<a href='/editdish?id={$row['ID']}' class='card_dish-edit'>Edit</a>";
+    echo "</div>";
+    echo "</div>";
+  }
+} else {
+  echo "<p>No results found.</p>";
+}
+$conn->close();
 
 
 
