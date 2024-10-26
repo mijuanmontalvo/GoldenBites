@@ -33,9 +33,9 @@ $userID=$_SESSION['ID'];
 <hr>
 <table class="table_reservation" style="width:100%">
   <tr>
-    <th>Reservation Id</th>
+    
     <th>Name Dish</th>
-    <th>Dish Id</th>
+    
     <th>Date reservation</th>
     <th>Number Dish</th>
     <th>Observation</th>
@@ -61,9 +61,9 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     
     echo "<tr>";
-    echo "<td>" . $row['Reservation_ID'] . "</td>";
+   // echo "<td>" . $row['Reservation_ID'] . "</td>";
     echo "<td>" . $row['Name_Dish'] . "</td>";
-    echo "<td>" . $row['DishID'] . "</td>";
+   // echo "<td>" . $row['DishID'] . "</td>";
     echo "<td>" . $row['DateReservation'] . "</td>";
     echo "<td>" . $row['NumberDish'] . "</td>";
     echo "<td>" . $row['Observation'] . "</td>";

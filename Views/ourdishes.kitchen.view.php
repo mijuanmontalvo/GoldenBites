@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
     echo "<td>" . $row['description'] . "</td>";
     echo "<td>" . number_format($row['price'],2) . "</td>";
     echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['image']) . "'/></td>";
-    echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a>" . "</td>";
+    echo "<td>" ." <a href=/editdish?id=$row[ID] class='card_dish-edit'>Edit</a>" . "</td>";
     echo "</tr>";
   }
 } else {
@@ -87,7 +87,7 @@ if ($result->num_rows > 0) {
     echo "<h3 class='card_dish-title'>" . $row['name'] . "</h3>";
     echo "<p class='card_dish-description'>" . $row['description'] . "</p>";
     echo "<p class='card_dish-price'>$" . number_format($row['price'], 2) . "</p>";
-    echo "<a href='/editdish?id={$row['ID']}' class='card_dish-edit'>Edit</a>";
+    echo "<a href='/editdish?id={$row['ID']}' class='card_dish-edit' class='card_dish-edit'>Edit</a>";
     echo "</div>";
     echo "</div>";
   }

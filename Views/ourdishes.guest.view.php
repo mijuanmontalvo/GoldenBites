@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
     echo "<td>" . $row['description'] . "</td>";
     echo "<td>" . number_format($row['price'],2) . "</td>";
     echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['image']) . "'/></td>";
-    echo "<td>" ." <a href=/makereservationfromdish?id=$row[ID]>Reserve it</a>" . "</td>";
+    echo "<td>" ." <a href=/makereservationfromdish?id=$row[ID] class='card_dish-edit'>Reserve it</a>" . "</td>";
     echo "</tr>";
   }
 } else {
