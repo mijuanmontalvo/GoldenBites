@@ -6,6 +6,7 @@ $routes =[
     '/home'=>'controllers/home.php',
     '/index_process'=>'controllers/index_process.php',
     '/makereservation'=>'controllers/makereservation.php',
+    '/makereservationfromdish'=>'controllers/makereservationfromdish.php',
     '/insertar_reservation'=>'controllers/insertar_reservation.php',
     '/registrarcuenta'=>'controllers/registrarcuenta.php',
     '/ourdishes'=>'controllers/ourdishes.php',
