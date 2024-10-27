@@ -108,3 +108,47 @@ a{
 a:hover{
     color: #2579AF;
 }
+
+@media (max-width: 768px) {
+
+    .login-container {
+        width: 100%;
+    }
+
+    form {
+        width: 100%; 
+        padding: 1rem 2rem; 
+    }
+
+    h1 {
+        font-size: 24px; 
+        width: 100%; 
+        margin: 0; 
+    }
+
+    input, select {
+        width: 100%; 
+        margin: 5px 0; 
+    }
+
+    button {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    a {
+        display: block; 
+        float: none; 
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .logo {
+        max-width: 80px; 
+    }
+
+    .login-container {
+        padding: 10px; 
+        margin: 0 10px; 
+    }
+}
