@@ -21,6 +21,9 @@ To solve this problem, an app will be created (GoldenBites) so that the guests o
 
 # Installation Steps
 
+To create this project it was necessary to install XAMPP (PHP, MySQL, Apache), below are the steps to follow:
+
+
 # Usage Instructions
 
 # Basic Contribution Guidelines
