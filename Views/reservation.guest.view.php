@@ -21,7 +21,7 @@ $userID=$_SESSION['ID'];
 
     
             <div class="addnewdish">
-            <a href="/makereservation"  class="text-blue-500 hover:underline boton">
+            <a href="/makereservation"  class="btn text-blue-500 hover:underline boton">
             Add a new reservation
             </a>
             </div> 

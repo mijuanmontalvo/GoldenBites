@@ -11,7 +11,7 @@
 
     <section class="gallery" >
             <div class="addnewdish">
-            <a href="/addnewdish"  class="text-blue-500 hover:underline boton">
+            <a href="/addnewdish"  class="btn text-blue-500 hover:underline boton">
             Add a new dish
             </a>
             </div> 
