@@ -3,6 +3,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes =[
     '/'=>'controllers/index.php',
+    '/index.php'=>'controllers/index.php',
     '/home'=>'controllers/home.php',
     '/index_process'=>'controllers/index_process.php',
     '/makereservation'=>'controllers/makereservation.php',
