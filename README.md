@@ -23,10 +23,10 @@ Building a web application where residents can generate orders that include spec
 
 ## Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: PHP
-- **Database**: MySQL/MariaDB
-- **Code editor**: Visual Studio Code
+- **Frontend**: `HTML`, `CSS`, `JavaScript`
+- **Backend**: `PHP`
+- **Database**: `MySQL`/`MariaDB`
+- **Code editor**: `Visual Studio Code`
 
 **Note**: For the construction of this web application, XAMPP has been used, which is a free software package that provides a local server development environment. Its name is an acronym that represents its main components: X (multiplatform), Apache (web server), MySQL/MariaDB (database manager), PHP (programming language), and Perl (programming language). This package facilitates the configuration of a local server for the development of web applications, since it includes all the necessary tools in a single installation. XAMPP is widely used by developers looking for a simple and efficient environment to develop web applications locally.
 
@@ -46,16 +46,16 @@ Open the cloned project in Visual Studio Code (VS Code).
 - **Step 4**: Building or import the database with its respective tables: User, reservation and dish ([Here](/Database) is a backup of the database). In PHPMyAdmin, select the "Import" tab and choose the `Goldenbites.sql` file to import.
 
 - **Step 5**: Serve the Project
-Navigate to the index.php file, right-click on it, and select "PHP Server: Serve project". This will serve your project at http://localhost:3000/.
+Navigate to the index.php file, right-click on it, and select "PHP Server: Serve project". This will serve your project at `http://localhost:3000/`.
 
 - **Step 6**: Start to use Goldenbites
-With the server running and the database set up, navigate to http://localhost:3000/ in your web browser to start using Goldenbites.
+With the server running and the database set up, navigate to `http://localhost:3000/` in your web browser to start using Goldenbites.
 
 **Note**: Once the application is loaded on the PC it will be possible to use the web application or it will be possible to update the code (HTML, PHP, CSS, MySQL) to make improves.
 
 ## Usage Instructions
 
-Once the application is loaded and installed it will be possible to use it, check the [user manual](/usermanual.pdf).
+Once the application is loaded and installed it will be possible to use it, check the [user manual](/Manuals/Usermanual.pdf).
 
 ## License
 
