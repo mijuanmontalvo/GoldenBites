@@ -43,7 +43,7 @@ To install this web application it is necessary to take the following steps:
 - **Step 3**: Open the Project in Visual Studio Code
 Open the cloned project in Visual Studio Code (VS Code).
 
-- **Step 4**: Building or import the database with its respective tables: User, reservation and dish ([Here](/database) is a backup of the database). In PHPMyAdmin, select the "Import" tab and choose the `Goldenbites.sql` file to import.
+- **Step 4**: Building or import the database with its respective tables: User, reservation and dish ([Here](/Database) is a backup of the database). In PHPMyAdmin, select the "Import" tab and choose the `Goldenbites.sql` file to import.
 
 - **Step 5**: Serve the Project
 Navigate to the index.php file, right-click on it, and select "PHP Server: Serve project". This will serve your project at http://localhost:3000/.
