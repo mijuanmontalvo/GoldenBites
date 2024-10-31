@@ -19,6 +19,8 @@ The problem here is that the kitchens of the residences do not know the addition
 
 Building a web application where residents can generate orders that include special dishes that are not included in the regular daily menu. On the other hand, the web application will allow the kitchen to review the orders made by residents and thus have a clear idea of ​​the additional dishes that need to be prepared for a specific date.
 
+![Homepage](/images/Homepage.png)
+
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
@@ -41,23 +43,24 @@ To install this web application it is necessary to take the following steps:
 - **Step 3**: Open the Project in Visual Studio Code
 Open the cloned project in Visual Studio Code (VS Code).
 
-- **Step 4**: Building or import the database with its respective tables: User, reservation and dish ([Here](/database) is a backup of the database). In PHPMyAdmin, select the "Import" tab and choose the Goldenbites.sql file to import.
+- **Step 4**: Building or import the database with its respective tables: User, reservation and dish ([Here](/database) is a backup of the database). In PHPMyAdmin, select the "Import" tab and choose the `Goldenbites.sql` file to import.
 
 - **Step 5**: Serve the Project
 Navigate to the index.php file, right-click on it, and select "PHP Server: Serve project". This will serve your project at http://localhost:3000/.
 
 - **Step 6**: Start to use Goldenbites
-With the server running and the database set up, navigate to http://localhost:3000/ in your web browser to start using Goldenbites ([here is a user manual](/usermanual)).
+With the server running and the database set up, navigate to http://localhost:3000/ in your web browser to start using Goldenbites.
 
 **Note**: Once the application is loaded on the PC it will be possible to use the web application or it will be possible to update the code (HTML, PHP, CSS, MySQL) to make improves.
 
 ## Usage Instructions
 
+Once the application is loaded and installed it will be possible to use it, check the [user manual](/usermanual.pdf).
 
 ## License
 
-This project is licensed under the MIT License. For more details, see the LICENSE file.
+This project is licensed under the MIT License. For more details in [LICENSE.md](/LICENSE.md) file.
 
 ## Basic Contribution Guidelines
 
-Contributions are welcome. If you have any ideas or improvements, you can fork the repository and submit a pull request.
+Contributions are welcome. If you have any ideas or improvements, you can fork the repository and submit a pull request, more information in [CONTRIBUTING.md](/CONTRIBUTING.md) 
