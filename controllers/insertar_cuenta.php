@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 
 
-  // Si el nombre de usuario ya existe, mostrar un mensaje de error
+  // If the username already exists, display an error message
   echo "<script>alert('El nombre de usuario ya está en uso. Por favor, elige otro.');</script>";
   echo "<script>window.history.back();</script>";
 } else {
