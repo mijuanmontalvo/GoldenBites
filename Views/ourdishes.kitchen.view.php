@@ -20,6 +20,7 @@
 <hr>
 <br>
 <h2>List of special dishes</h2>
+<br>
 <hr>
 <table class="table_dish" style="width:100%">
   <tr>
