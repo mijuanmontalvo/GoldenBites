@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM goldenbites.user where UserName = '$username' and Password = '$password'";
+    $sql = "SELECT * FROM user where UserName = '$username' and Password = '$password'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     if ($result->num_rows == 1) {
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['Name']=$row['Name'];
         $_SESSION['RoomNumber']=$row['RoomNumber'];
         $_SESSION['email']=$row['email'];
-        header("Location: /home");
+        header('Location: /home');
     } else {
         $mensaje_error = "Usuario y/o contraseña incorrectos.";
         echo "<script>alert('Incorrect username and/or password, please try again.');</script>";
