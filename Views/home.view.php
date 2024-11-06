@@ -22,13 +22,21 @@
       </li>
 
     </ul>
-    
 
-    <div class="addnewdish">
-            <a href="/makereservation"  class="btn text-blue-500 hover:underline boton">
-            Reserve our delicious dishes
-            </a>
-            </div> 
+    <?php     if ($_SESSION['UserType']=="Kitchen"){
+    
+} else if($_SESSION['UserType']=="Guest"){
+  ?>
+  <div class="addnewdish">
+  <a href="/makereservation"  class="btn text-blue-500 hover:underline boton">
+  Reserve our delicious dishes
+  </a>
+  </div> 
+  
+  <?php
+}  ?>
+
+
 
 <br>
 <br>
