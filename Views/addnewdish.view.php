@@ -168,6 +168,23 @@ form a:hover {
     background-color: #5a6268;
 }
 
+
+form input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+form input[type="file"]:hover {
+    background-color: #e2e6ea;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     form {
