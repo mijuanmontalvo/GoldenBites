@@ -25,9 +25,11 @@ $result = $conn->query($sql);
 
 <h2>Enter your reservation details</h2>
 <br>
+        <hr>
+        <br>
 
 <form action="/insertar_reservation" method="post" onsubmit="return validateForm()">
-    <label for="plato">Name of dish:</label><br>
+    <label for="plato">Name of dish:</label>
     <select id="name_dish" name="name_dish">
         <?php
         if ($result->num_rows > 0) {
@@ -38,13 +40,13 @@ $result = $conn->query($sql);
         ?>
     </select><br><br>
 
-    <label for="fecha">Reservation Date and Time:</label><br>
+    <label for="fecha">Reservation Date and Time:</label>
     <input type="datetime-local" id="reservation_date" name="reservation_date" required><br><br>
 
-    <label for="cantidad">Number of dishes:</label><br>
+    <label for="cantidad">Number of dishes:</label>
     <input type="number" id="number_dishes" name="number_dishes" min="1" value="1" required><br><br>
 
-    <label for="observacion">Observation:</label><br>
+    <label for="observacion">Observation:</label>
     <textarea id="observation" name="observation" rows="4" cols="50" maxlength="100"></textarea><br><br>
 
     <input type="submit" value="Reserve">
