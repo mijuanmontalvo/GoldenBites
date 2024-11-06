@@ -9,21 +9,23 @@ $room_number = $_POST['room_number'];
 $email = $_POST['email'];
 $user_name = $_POST['user_name'];
 $password = $_POST['password'];
+$kitchen_code = $_POST['kitchen_code'];
 
 
-$sql = "SELECT * FROM goldenbites.user WHERE UserName = '$user_name'";
+
+$sql = "SELECT * FROM user WHERE UserName = '$user_name'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
 
   // If the username already exists, display an error message
-  echo "<script>alert('El nombre de usuario ya está en uso. Por favor, elige otro.');</script>";
+  echo "<script>alert('The username is already in use. Please choose another one.');</script>";
   echo "<script>window.history.back();</script>";
 } else {
-// Si el nombre de usuario no existe, procede a registrar la cuenta
+// If the username does not exist, proceed to register the account
 
-$sql = "INSERT INTO goldenbites.user (UserType, Name, RoomNumber, email, UserName, Password) 
+$sql = "INSERT INTO user (UserType, Name, RoomNumber, email, UserName, Password) 
         values('$type_user','$name_usuario','$room_number','$email','$user_name','$password')";
 
 if ($conn->query($sql) === TRUE) {

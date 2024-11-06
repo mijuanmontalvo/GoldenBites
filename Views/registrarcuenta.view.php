@@ -6,66 +6,141 @@
     <title>GoldenBites</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
-        // Función de validación del formulario
+        // Function to validate form
         function validateForm() {
-            // Obtener valores de los campos
+            // Getting values of fields
             const name = document.forms["frmRegister"]["name_usuario"].value.trim();
             const roomNumber = document.forms["frmRegister"]["room_number"].value.trim();
             const email = document.forms["frmRegister"]["email"].value.trim();
             const username = document.forms["frmRegister"]["user_name"].value.trim();
             const password = document.forms["frmRegister"]["password"].value.trim();
+            const userType = document.forms["frmRegister"]["type_user"].value;
+            const kitchenCode = document.forms["frmRegister"]["kitchen_code"].value.trim();
             
-            // Expresiones regulares para validación
-            const namePattern = /^[A-Za-z\s]+$/; // Solo letras y espacios
-            const roomNumberPattern = /^[0-9]+$/; // Solo números
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Formato de correo
-            const usernamePattern = /^[a-zA-Z0-9._-]{4,}$/; // Letras, números, guión y punto, mínimo 4 caracteres
-            const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/; // Letras y números, mínimo 6 caracteres
+            // Pattern to validations
+            const namePattern = /^[A-Za-z\s]+$/; // Only letters and spaces
+            const roomNumberPattern = /^[0-9]+$/; // Only numbers
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // email format
+            const usernamePattern = /^[a-zA-Z0-9._-]{4,}$/; // Letters, numbers, hyphen and period, minimum 4 characters
+            const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/; // Letters, numbers, minimum 6 characters
             
-            // Validaciones de cada campo
-            if (!name) {
-                alert("El campo 'Name' es obligatorio.");
+            if (userType === "Kitchen") {
+                // Validate kitchen code for "Kitchen" user type
+                if (kitchenCode !== "abcd") {
+                    alert("The 'Kitchen code' is incorrect. Please enter the correct code.");
+                    return false;
+                }
+
+                if (!name) {
+                alert("The 'Name' field is required.");
                 return false;
             } else if (!namePattern.test(name)) {
-                alert("El campo 'Name' solo debe contener letras y espacios.");
+                alert("The 'Name' field must only contain letters and spaces.");
                 return false;
             }
 
-            if (!roomNumber) {
-                alert("El campo 'Room number' es obligatorio.");
-                return false;
-            } else if (!roomNumberPattern.test(roomNumber)) {
-                alert("El campo 'Room number' solo debe contener números.");
-                return false;
-            }
-
-            if (!email) {
-                alert("El campo 'Email' es obligatorio.");
+                if (!email) {
+                alert("The 'Email' field is required.");
                 return false;
             } else if (!emailPattern.test(email)) {
-                alert("El campo 'Email' debe tener un formato válido (ejemplo@dominio.com).");
+                alert("The 'Email' field must be in a valid format (example@domain.com).");
                 return false;
             }
 
             if (!username) {
-                alert("El campo 'Username' es obligatorio.");
+                alert("The 'Username' field is required.");
                 return false;
             } else if (!usernamePattern.test(username)) {
-                alert("El campo 'Username' debe tener al menos 4 caracteres y puede incluir letras, números, guiones y puntos.");
+                alert("The 'Username' field must be at least 4 characters and can include letters, numbers, hyphens and periods.");
                 return false;
             }
 
             if (!password) {
-                alert("El campo 'Password' es obligatorio.");
+                alert("The 'Password' field is required.");
                 return false;
             } else if (!passwordPattern.test(password)) {
-                alert("El campo 'Password' debe tener al menos 6 caracteres, incluyendo letras y números.");
+                alert("The 'Password' field must be at least 6 characters, including letters and numbers.");
                 return false;
             }
 
-            // Si todas las validaciones pasan
+
+
+            } else if (userType === "Guest"){
+
+
+            // Validation of each field
+            if (!roomNumber) {
+                alert("The 'Room number' field is required.");
+                return false;
+            } else if (!roomNumberPattern.test(roomNumber)) {
+                alert("The 'Room number' field must only contain numbers");
+                return false;
+            }
+
+            if (!name) {
+                alert("The 'Name' field is required.");
+                return false;
+            } else if (!namePattern.test(name)) {
+                alert("The 'Name' field must only contain letters and spaces.");
+                return false;
+            }
+
+
+
+            if (!email) {
+                alert("The 'Email' field is required.");
+                return false;
+            } else if (!emailPattern.test(email)) {
+                alert("The 'Email' field must be in a valid format (example@domain.com).");
+                return false;
+            }
+
+            if (!username) {
+                alert("The 'Username' field is required.");
+                return false;
+            } else if (!usernamePattern.test(username)) {
+                alert("The 'Username' field must be at least 4 characters and can include letters, numbers, hyphens and periods.");
+                return false;
+            }
+
+            if (!password) {
+                alert("The 'Password' field is required.");
+                return false;
+            } else if (!passwordPattern.test(password)) {
+                alert("The 'Password' field must be at least 6 characters, including letters and numbers.");
+                return false;
+            }
+
+
+
+        }
+            
+            // If all validations pass.
             return true;
         }
+
+
+                // Function to enable/disable fields based on user type selection
+                function toggleFields() {
+            const userType = document.forms["frmRegister"]["type_user"].value;
+            const kitchenCodeField = document.getElementById("kitchenCodeField");
+            const guestFields = document.getElementById("guestFields");
+
+            if (userType === "Kitchen") {
+                kitchenCodeField.style.display = "block";
+                guestFields.style.display = "none";
+            } else {
+                kitchenCodeField.style.display = "none";
+                guestFields.style.display = "block";
+            }
+        }
+
+        window.onload = function() {
+            // Initially hide the Kitchen code field
+            document.getElementById("kitchenCodeField").style.display = "none";
+            // Set event listener to toggle fields when user type changes
+            document.forms["frmRegister"]["type_user"].addEventListener("change", toggleFields);
+        };
     </script>
 </head>
 <body>
@@ -82,11 +157,21 @@
             <option value="Kitchen">Kitchen</option>
         </select>   
 
-        <label>Name</label>
-        <input type="text" name="name_usuario" placeholder="Enter your name">
+         <div id="kitchenCodeField">
+        <label>Kitchen code</label>
+        <input type="text" name="kitchen_code" placeholder="Enter the kitchen code">
+        </div>
+        
+         <div id="guestFields">
+        
 
         <label>Room number</label>
         <input type="text" name="room_number" placeholder="Enter your room number">
+        </div>
+
+        <label>Name</label>
+        <input type="text" name="name_usuario" placeholder="Enter your name">
+
 
         <label>Email</label>
         <input type="text" name="email" placeholder="Enter your email">
