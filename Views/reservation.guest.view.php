@@ -17,7 +17,7 @@ $userID=$_SESSION['ID'];
 ?>
 
 
-    <section class="gallery" >
+<section class="trips" id="trip">
 
     
             <div class="addnewdish">
@@ -30,6 +30,7 @@ $userID=$_SESSION['ID'];
 <hr>
 <br>
 <h2>Reservations List</h2>
+<br>
 <hr>
 <table class="table_reservation" style="width:100%">
   <tr>
@@ -68,7 +69,7 @@ if ($result->num_rows > 0) {
     echo "<td>" . $row['NumberDish'] . "</td>";
     echo "<td>" . $row['Observation'] . "</td>";
     //echo "<td>" . $row['Estate'] . "</td>";
-    echo "<td>" ." <a href=/editreservation?id=$row[Reservation_ID] class='card_dish-edit'>Edit</a> | <a href=/deletereservation?id=$row[Reservation_ID] class='card_dish-edit'>Cancel</a>" . "</td>";
+    echo "<td>" ." <a href=/editreservation?id=$row[Reservation_ID] class='card_dish-edit'>Edit</a>  <a href=/deletereservation?id=$row[Reservation_ID] class='card_dish-edit'>Cancel</a>" . "</td>";
     echo "</tr>";
   }
 } else {
@@ -111,7 +112,7 @@ if ($result->num_rows > 0) {
     echo "<p class='card_dish-description'>"."Observation: " . $row['Observation'] . "</p>";
     echo "<p class='card_dish-description'>"."Date: " . $row['DateReservation'] . "</p>";
 
-    echo "<a href='/editreservation?id={$row['Reservation_ID']}' class='card_dish-edit'>Edit</a> | <a href='/deletereservation?id={$row['Reservation_ID']}' class='card_dish-edit'>Cancel</a>";
+    echo "<a href='/editreservation?id={$row['Reservation_ID']}' class='card_dish-edit'>Edit</a>  <a href='/deletereservation?id={$row['Reservation_ID']}' class='card_dish-edit'>Cancel</a>";
     echo "</div>";
     echo "</div>";
   }

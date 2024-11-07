@@ -57,7 +57,9 @@ $Estate=$row['Estate'];
 ?> 
 
 <section class="trips" id="trip" >
-        
+<hr>
+<br>
+
         <h2>Edit the data of the reservation</h2>
         <br>
         <hr>

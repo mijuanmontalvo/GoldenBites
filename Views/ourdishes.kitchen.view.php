@@ -9,7 +9,7 @@
 
 
 
-    <section class="gallery" >
+<section class="trips" id="trip">
             <div class="addnewdish">
             <a href="/addnewdish"  class="btn text-blue-500 hover:underline boton">
             Add a new dish

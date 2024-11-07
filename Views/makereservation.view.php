@@ -23,7 +23,7 @@ $sql = "SELECT ID, Name FROM dish";
 $result = $conn->query($sql);
 ?>
 
-<h2>Enter your reservation details</h2>
+<h2>Enter your reservation detailsss</h2>
 <br>
         <hr>
         <br>

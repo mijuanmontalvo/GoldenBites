@@ -9,7 +9,7 @@
 
 
 
-    <section class="gallery" >
+<section class="trips" id="trip">
 
 
         <br>
