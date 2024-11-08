@@ -24,7 +24,7 @@
 <hr>
 <table class="table_dish" style="width:100%">
   <tr>
-    <th>ID</th>
+
     <th>Name</th>
     <th>Description</th>
     <th>Price ($)</th>
@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     
     echo "<tr>";
-    echo "<td>" . $row['ID'] . "</td>";
+   
     echo "<td>" . $row['name'] . "</td>";
     echo "<td>" . $row['description'] . "</td>";
     echo "<td>" . number_format($row['price'],2) . "</td>";
