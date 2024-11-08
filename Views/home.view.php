@@ -27,6 +27,51 @@
     
 } else if($_SESSION['UserType']=="Guest"){
   ?>
+
+<?php
+
+$menu = [
+    ["lunch" => "Poutine with Maple Tart", "dinner" => "Tourtière with Butter Tarts"],
+    ["lunch" => "Pea Soup with Nanaimo Bars", "dinner" => "Roast Beef with Blueberry Grunt"],
+    ["lunch" => "Caesar Salad with Butter Tarts", "dinner" => "Maple-glazed Salmon with Nanaimo Bars"],
+    ["lunch" => "Montreal Smoked Meat with Date Squares", "dinner" => "Chicken Pot Pie with Maple Syrup Pie"],
+    ["lunch" => "Fish and Chips with Sugar Pie", "dinner" => "BBQ Ribs with Blueberry Cobbler"],
+    ["lunch" => "Lobster Roll with Blueberry Cheesecake", "dinner" => "Steak Frites with Maple Cake"],
+    ["lunch" => "Bison Burger with Saskatoon Berry Tart", "dinner" => "Roast Duck with Date Cake"]
+];
+
+
+$currentDate = new DateTime();
+?>
+
+<section class="menu-section">
+    <h2>Regular Weekly Menu</h2>
+    <br>
+    <div class="menu-grid">
+        <?php foreach ($menu as $index => $dayMenu) : ?>
+            <?php
+                
+                $date = clone $currentDate;
+                $date->modify("+$index day");
+                
+                
+                $formattedDate = $date->format('D, M j, Y');
+            ?>
+            <div class="menu-card">
+                <h3><?php echo $formattedDate; ?></h3>
+                <p><strong>Lunch:</strong> <?php echo $dayMenu['lunch']; ?></p>
+                <p><strong>Dinner:</strong> <?php echo $dayMenu['dinner']; ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+
+
+
+
+
+
+
   <div class="addnewdish">
   <a href="/makereservation"  class="btn text-blue-500 hover:underline boton">
   Reserve our delicious dishes
@@ -51,8 +96,107 @@
     </div>
 
 
+
+
+
+
+
+
+
+
+
+
   </section>
 
 
   <!-- Footer -->
 <?php require('partials/footer.php')?>
+
+
+<style>
+/* General styling */
+.menu-section {
+    margin: 10px auto;
+    margin-bottom: 100px;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.menu-section h2 {
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Grid layout */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu cards */
+.menu-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    
+}
+
+.menu-card h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Button styling */
+.addnewdish a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #223054;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.addnewdish a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .menu-section {
+    margin: 0px auto;
+    margin-bottom: 50px;
+
+}
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+    }
+
+    .menu-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .menu-card p {
+        font-size: 0.9rem;
+    }
+}
+
+
+</style>

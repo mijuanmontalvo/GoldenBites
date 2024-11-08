@@ -25,7 +25,7 @@
     <th>Description</th>
     <th>Price ($)</th>
     <th>Image</th>
-    <th>Operaciones</th>
+    <th></th>
   </tr>
  
 <?php
