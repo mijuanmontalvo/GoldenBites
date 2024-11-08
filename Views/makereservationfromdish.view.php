@@ -37,7 +37,9 @@ $NameID=$row2['Name'];
   }
 
 ?>
-    
+          <br> 
+          <hr>
+           
       <h2>Enter your reservation details</h2>
       <br>
         <hr>

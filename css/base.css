@@ -213,6 +213,13 @@ nav .btn:hover {
   color: #fff;
 }
 
+/* banner*/
+
+.welcome {
+  text-align: right; /* Alineación a la derecha */
+  font-weight: bold; /* Negrita */
+}
+
 /* ############  Trips ############ */
 .trips {
   padding: 1rem;
@@ -223,8 +230,8 @@ nav .btn:hover {
 
 .trips article {
   margin: 2rem auto;
-  width: 80%;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .trips h1 {

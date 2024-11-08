@@ -5,6 +5,9 @@
   <!-- Banner -->
 <?php require('partials/banner.php')?> 
 <section class="trips" id="trip" >
+
+<hr>
+<br>
         <h2>
         Enter the data of the new plate
             

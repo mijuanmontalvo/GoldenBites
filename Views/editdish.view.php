@@ -26,8 +26,10 @@ $image=base64_encode($image);
 
 ?> 
 
-<section class="gallery" >
+<section class="trips" id="trip" >
 
+<hr>
+<br>
         <h2>
         Edit the data of the plate:
             
@@ -52,6 +54,7 @@ $image=base64_encode($image);
         <input type="file" name="image_dish">
         <br><br>
         <input type="submit" value="Edit dish">
+        <a id="btn-for"  href="/ourdishes"><< Back</a>
         </form>
 
   </section>

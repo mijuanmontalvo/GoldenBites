@@ -1,7 +1,7 @@
 <section class="trips" id="trips">
     <article>
       
-      <h2>Welcome <?php echo $_SESSION['username'] ?> to </h2>
+      <p class="welcome">Welcome <?php echo $_SESSION['username'] ?> </p>
     </article>
     <article>
    

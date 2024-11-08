@@ -22,8 +22,10 @@ if ($conn->connect_error) {
 $sql = "SELECT ID, Name FROM dish";
 $result = $conn->query($sql);
 ?>
+<hr>
+<br>
 
-<h2>Enter your reservation detailsss</h2>
+<h2>Enter your reservation details</h2>
 <br>
         <hr>
         <br>
