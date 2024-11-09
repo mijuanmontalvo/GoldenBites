@@ -23,12 +23,7 @@
 
     </ul>
 
-    <?php     if ($_SESSION['UserType']=="Kitchen"){
-    
-} else if($_SESSION['UserType']=="Guest"){
-  ?>
-
-<?php
+    <?php
 
 $menu = [
     ["lunch" => "Poutine with Maple Tart", "dinner" => "Tourtière with Butter Tarts"],
@@ -65,6 +60,15 @@ $currentDate = new DateTime();
         <?php endforeach; ?>
     </div>
 </section>
+
+
+
+    <?php     if ($_SESSION['UserType']=="Kitchen"){
+    
+} else if($_SESSION['UserType']=="Guest"){
+  ?>
+
+
 
 
 
