@@ -6,127 +6,124 @@
 <?php require('partials/banner.php')?> 
 <section class="trips" id="trips">
 
+
 <?php
 $servername = "localhost";
 $username = "food_reservation";
 $password = "1234";
 $dbname = "goldenbites";
 
+// Conexión a la base de datos
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-$sql = "SELECT ID, Name  
-        FROM dish";
+// Consultar todos los platos
+$sql = "SELECT ID, Name, image FROM dish WHERE ID = $ID";
 $result = $conn->query($sql);
 
-$sql2 = "SELECT ID, Name 
-         FROM dish
-         where ID=$ID";
-$result2 = $conn->query($sql2);
+$firstImage = ''; // Variable para almacenar la imagen del primer plato seleccionado
 
-if ($result2->num_rows > 0) {
-$row2 = $result2->fetch_assoc();
-$dishID=$row2['ID'];
-$NameID=$row2['Name'];
-
-} else {
-    echo "0 resultados";
-  }
-
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $firstImage = base64_encode($row['image']); // Obtener la imagen del primer plato
+}
 ?>
-          <hr>
-          <br> 
-          
-           
-      <h2>Enter your reservation details</h2>
-      <br>
-        <hr>
-        <br>
 
-      <form action="/insertar_reservation" method="post">
-      <label for="plato">Name of dish:</label>
-    <select id="name_dish" name="name_dish">
-        <?php
-        if ($result->num_rows > 0) {
-          echo '<option value="' . $row2["ID"] . '">' . $row2['Name']. '</option>';
-            while ($row = $result->fetch_assoc()) {
-                echo '<option value="' . $row["ID"] . '">' . $row["Name"] . '</option>';
+<hr>
+<br> 
+<h2>Enter your reservation details</h2>
+<br>
+<hr>
+<br>
+
+<div class="edit-container">
+    <form action="/insertar_reservation" method="post" onsubmit="return validateForm()">
+        <label for="plato">Name of dish:</label>
+        <select id="name_dish" name="name_dish" onchange="updateDishImage()">
+            <?php
+            // Generar las opciones del select
+            if ($result->num_rows > 0) {
+                echo '<option value="' . $row["ID"] . '" data-image="data:image/jpeg;base64,' . base64_encode($row["image"]) . '">' . $row['Name'] . '</option>';
+                while ($row = $result->fetch_assoc()) {
+                    echo '<option value="' . $row["ID"] . '" data-image="data:image/jpeg;base64,' . base64_encode($row["image"]) . '">' . $row["Name"] . '</option>';
+                }
             }
-        }
-        ?>
-    </select><br><br>
+            ?>
+        </select><br><br>
 
-    <label for="fecha">Reservation Date and Time:</label>
-    <input type="datetime-local" id="reservation_date" name="reservation_date"><br><br>
+        <label for="fecha">Reservation Date and Time:</label>
+        <input type="datetime-local" id="reservation_date" name="reservation_date"><br><br>
 
-    <label for="cantidad">Number of dishes:</label>
-    <input type="number" id="number_dishes" name="number_dishes" min="1" value="1" required><br><br>
+        <label for="cantidad">Number of dishes:</label>
+        <input type="number" id="number_dishes" name="number_dishes" min="1" value="1" required><br><br>
 
-    <label for="observacion">Observation:</label>
-    <textarea id="observation" name="observation" rows="4" cols="50"></textarea><br><br>
+        <label for="observacion">Observation:</label>
+        <textarea id="observation" name="observation" rows="4" cols="50"></textarea><br><br>
 
+        <input type="submit" value="Reserve">
+        <a id="btn-form" href="/ourdishes"><< Back</a>
+    </form>
 
+    <!-- Contenedor de la imagen del plato -->
+    <div id="dish-image-container">
+        <img id="dish-image" src="data:image/jpeg;base64,<?php echo $firstImage; ?>" alt="Dish Image">
+    </div>
+</div>
 
-    <input type="submit" value="Reserve">
-    <a id="btn-form"  href="/ourdishes"><< Back</a>
-</form>
+</section>
 
-  </section>
-
-
-  <!-- Footer -->
+<!-- Footer -->
 <?php require('partials/footer.php')?>
 
 <script>
-// Function to validate form
+// Función para actualizar la imagen del plato
+function updateDishImage() {
+    const select = document.getElementById("name_dish");
+    const selectedOption = select.options[select.selectedIndex];
+    const imageSrc = selectedOption.getAttribute("data-image");
+    document.getElementById("dish-image").src = imageSrc;
+}
+
+// Validación del formulario
 function validateForm() {
-    // Get fields vsalues
     const reservationDate = document.getElementById('reservation_date').value;
     const numberDishes = document.getElementById('number_dishes').value;
     const observation = document.getElementById('observation').value;
 
-    // Validate date field (not empty)
     if (!reservationDate) {
         alert("The 'Reservation Date and Time' field is required.");
         return false;
     }
-
-    // Validate number of plates (must be a positive numerical value)
     if (isNaN(numberDishes) || numberDishes <= 0 || !Number.isInteger(Number(numberDishes))) {
         alert("The 'Number of dishes' field must be a positive integer.");
         return false;
     }
-
-    // Validate length of observation field (maximum 100 characters)
     if (observation.length > 100) {
         alert("The 'Observation' field cannot exceed 100 characters.");
         return false;
     }
 
-    // If all validations pass, the form is allowed to be submitted.
     return true;
 }
 </script>
 
-
-
 <style>
-
+/* Estilos generales para el formulario */
 form {
     max-width: 500px;
-    margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
     border: 1px solid #ccc;
+    
 }
 
-/* Styles for labels and inputs */
+/* Estilos para etiquetas e inputs */
 form label {
     font-weight: bold;
     color: #333;
@@ -148,16 +145,6 @@ form textarea {
     transition: border-color 0.3s;
 }
 
-form input[type="text"]:focus,
-form input[type="number"]:focus,
-form input[type="datetime-local"]:focus,
-form select:focus,
-form textarea:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-/* Submit button */
 form input[type="submit"],
 form a {
     display: inline-block;
@@ -175,21 +162,11 @@ form a {
     transition: background-color 0.3s;
 }
 
-/*#btn-form {
-    float: left;
-    margin-left: 10px;
-    padding: .5rem;
-    text-decoration: none;
-    color: #fff;
-
-}*/
-
 form input[type="submit"]:hover,
 form a:hover {
     background-color: #0056b3;
 }
 
-/* Back button */
 form a {
     background-color: #6c757d;
 }
@@ -198,8 +175,36 @@ form a:hover {
     background-color: #5a6268;
 }
 
-/* Mobile responsiveness */
+/* Contenedor de la imagen del plato */
+#dish-image-container {
+    max-width: 500px;
+    max-height: 500px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#dish-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Diseño responsivo */
+.edit-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+}
+
 @media (max-width: 768px) {
+    .edit-container {
+        flex-direction: column-reverse;
+    }
+
     form {
         padding: 15px;
     }
