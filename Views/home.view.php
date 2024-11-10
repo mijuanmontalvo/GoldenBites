@@ -59,10 +59,13 @@ $currentDate = new DateTime();
             </div>
         <?php endforeach; ?>
     </div>
+    
+    
+
 </section>
 
-
-
+<h2 class="extramenu">Extra Menu</h2>
+<br>
     <?php     if ($_SESSION['UserType']=="Kitchen"){
     
 } else if($_SESSION['UserType']=="Guest"){
@@ -177,6 +180,11 @@ $currentDate = new DateTime();
 
 .addnewdish a:hover {
     background-color: #0056b3;
+}
+
+.extramenu {
+
+text-align: center;
 }
 
 /* Responsive design for mobile */
