@@ -1,7 +1,12 @@
 <?php
 session_start();
-include '../functions.php';
-$conn = conectarBD();
+$servername = "localhost";
+$username = "food_reservation";
+$password = "1234";
+$dbname = "goldenbites";
+
+// Crear la conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 $type_user = $_POST['type_user'];
 $name_usuario = $_POST['name_usuario'];

@@ -1,7 +1,6 @@
 <?php
 session_start();
-include '../functions.php';
-$conn = conectarBD();
+include 'db_connect.php';
 
 $userID=$_SESSION['ID'];
 

@@ -1,7 +1,6 @@
 <?php
 session_start();
-include '../functions.php';
-$conn = conectarBD();
+include 'db_connect.php';
 
 $name = $_POST['name'];
 $description = $_POST['description'];

@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['RoomNumber']=$row['RoomNumber'];
         $_SESSION['email']=$row['email'];
         //header('Location: /home');
-        echo "<script>window.location.href = '/home?id=$row[ID]';</script>";
+        echo "<script>window.location.href = '/home';</script>";
     } else {
         $mensaje_error = "Usuario y/o contraseña incorrectos.";
         echo "<script>alert('Incorrect username and/or password, please try again.');</script>";
