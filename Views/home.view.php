@@ -25,6 +25,8 @@
 
     <?php
 
+
+// Array to place regular dishes
 $menu = [
     ["lunch" => "Poutine with Maple Tart", "dinner" => "Tourtière with Butter Tarts"],
     ["lunch" => "Pea Soup with Nanaimo Bars", "dinner" => "Roast Beef with Blueberry Grunt"],
@@ -66,7 +68,9 @@ $currentDate = new DateTime();
 
 <h2 class="extramenu">Extra Menu</h2>
 <br>
-    <?php     if ($_SESSION['UserType']=="Kitchen"){
+    <?php     
+    // Code to verify rolles kitchen and guest
+    if ($_SESSION['UserType']=="Kitchen"){
     
 } else if($_SESSION['UserType']=="Guest"){
   ?>

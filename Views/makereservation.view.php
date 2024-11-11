@@ -6,22 +6,17 @@
 <?php require('partials/banner.php') ?> 
 
 <?php
-$servername = "localhost";
-$username = "food_reservation";
-$password = "1234";
-$dbname = "goldenbites";
+include 'db_connect.php';
 
-// Conectar a la base de datos
-$conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Consulta para obtener los platos y sus imágenes en base64
+// Query to get dishes and their images in base64
 $sql = "SELECT ID, Name, image FROM dish";
 $result = $conn->query($sql);
 
-// Convertir los resultados a un array para usarlos en JavaScript
+// Convert the results to an array for use in JavaScript
 $dishes = [];
 while ($row = $result->fetch_assoc()) {
     $dishes[] = [
@@ -71,23 +66,23 @@ while ($row = $result->fetch_assoc()) {
 <?php require('partials/footer.php') ?>
 
 <script>
-// Array de platos y sus imágenes en base64
+// Array of dishes and their images in base64
 const dishes = <?php echo json_encode($dishes); ?>;
 
-// Función para actualizar la imagen según el plato seleccionado
+// Function to update the image according to the selected dish
 function updateDishImage() {
     const selectElement = document.getElementById("name_dish");
     const selectedDishID = selectElement.value;
     const dishImageElement = document.getElementById("dishImage");
 
-    // Encontrar el plato seleccionado y actualizar la imagen
+    // Find the selected dish and update the image
     const selectedDish = dishes.find(dish => dish.ID == selectedDishID);
     if (selectedDish) {
         dishImageElement.src = "data:image/jpeg;base64," + selectedDish.Image;
     }
 }
 
-// Validación del formulario
+// Form validation
 function validateForm() {
     const reservationDate = document.getElementById('reservation_date').value;
     const numberDishes = document.getElementById('number_dishes').value;

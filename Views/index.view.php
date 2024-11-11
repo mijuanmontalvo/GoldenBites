@@ -40,7 +40,7 @@
 session_start();
 
 include 'db_connect.php';
-
+//Verify user and password
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];

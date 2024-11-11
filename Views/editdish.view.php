@@ -8,7 +8,7 @@
 <?php 
 include 'db_connect.php';
 
-
+//Query to select dish ID to be edited
 $sql = "SELECT ID, name, description, price, image FROM dish where ID=$ID";
 $result = $conn->query($sql);
 

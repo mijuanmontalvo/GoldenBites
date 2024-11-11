@@ -8,27 +8,24 @@
 
 
 <?php
-$servername = "localhost";
-$username = "food_reservation";
-$password = "1234";
-$dbname = "goldenbites";
 
-// Conexión a la base de datos
-$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Connection to the database
+include 'db_connect.php';
 
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Consultar todos los platos
+// See all dishes
 $sql = "SELECT ID, Name, image FROM dish WHERE ID = $ID";
 $result = $conn->query($sql);
 
-$firstImage = ''; // Variable para almacenar la imagen del primer plato seleccionado
+$firstImage = ''; // Variable to store the image of the first selected dish
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $firstImage = base64_encode($row['image']); // Obtener la imagen del primer plato
+    $firstImage = base64_encode($row['image']); // Get the image of the first dish
 }
 ?>
 
@@ -44,7 +41,7 @@ if ($result->num_rows > 0) {
         <label for="plato">Name of dish:</label>
         <select id="name_dish" name="name_dish" onchange="updateDishImage()">
             <?php
-            // Generar las opciones del select
+            // Generate the select options
             if ($result->num_rows > 0) {
                 echo '<option value="' . $row["ID"] . '" data-image="data:image/jpeg;base64,' . base64_encode($row["image"]) . '">' . $row['Name'] . '</option>';
                 while ($row = $result->fetch_assoc()) {
@@ -67,7 +64,7 @@ if ($result->num_rows > 0) {
         <a id="btn-form" href="/ourdishes"><< Back</a>
     </form>
 
-    <!-- Contenedor de la imagen del plato -->
+    <!-- Dish image container -->
     <div id="dish-image-container">
         <img id="dish-image" src="data:image/jpeg;base64,<?php echo $firstImage; ?>" alt="Dish Image">
     </div>
@@ -79,7 +76,7 @@ if ($result->num_rows > 0) {
 <?php require('partials/footer.php')?>
 
 <script>
-// Función para actualizar la imagen del plato
+// Function to update the image of the dish
 function updateDishImage() {
     const select = document.getElementById("name_dish");
     const selectedOption = select.options[select.selectedIndex];
@@ -87,7 +84,7 @@ function updateDishImage() {
     document.getElementById("dish-image").src = imageSrc;
 }
 
-// Validación del formulario
+// Form validation
 function validateForm() {
     const reservationDate = document.getElementById('reservation_date').value;
     const numberDishes = document.getElementById('number_dishes').value;
@@ -111,7 +108,7 @@ function validateForm() {
 </script>
 
 <style>
-/* Estilos generales para el formulario */
+/* General styles for the form */
 form {
     max-width: 500px;
     padding: 20px;
@@ -123,7 +120,7 @@ form {
     
 }
 
-/* Estilos para etiquetas e inputs */
+/* Styles for labels and inputs*/
 form label {
     font-weight: bold;
     color: #333;
@@ -175,7 +172,7 @@ form a:hover {
     background-color: #5a6268;
 }
 
-/* Contenedor de la imagen del plato */
+/* Dish image container */
 #dish-image-container {
     max-width: 500px;
     max-height: 500px;
@@ -192,7 +189,7 @@ form a:hover {
     border-radius: 5px;
 }
 
-/* Diseño responsivo */
+/* Responsive design */
 .edit-container {
     display: flex;
     justify-content: center;

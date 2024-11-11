@@ -9,7 +9,7 @@
 include 'db_connect.php';
 
 
-
+//Query to select reservation ID to be edited
 //$ID = $_GET['ID'];
 $sql = "SELECT ID, UserID, DishID, DateReservation, NumberDish, Observation, Estate 
         FROM reservation WHERE ID = $ID";
