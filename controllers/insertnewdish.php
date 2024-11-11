@@ -10,12 +10,13 @@ $price = $_POST['price'];
 
 $image_dish = addslashes(file_get_contents($_FILES['image_dish']['tmp_name']));
 
-$sql = "INSERT INTO goldenbites.dish (Name, Description, Price, Image) 
+$sql = "INSERT INTO dish (Name, Description, Price, Image) 
         values('$name','$description','$price','$image_dish')";
 
 if ($conn->query($sql) === TRUE) {
 
-    header("Location: /ourdishes");
+    //header("Location: /ourdishes");
+    echo "<script>window.location.href = '/ourdishes';</script>";
     echo "exito";
     exit();
   } else {

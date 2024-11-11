@@ -10,7 +10,8 @@ include 'db_connect.php';
 //query to delete dish in database
 $sql = "DELETE FROM reservation WHERE ID=$ID";
 $conn->query($sql);
-header("Location: /reservation");
+//header("Location: /reservation");
+echo "<script>window.location.href = '/reservation';</script>";
 $conn->close();
 
 

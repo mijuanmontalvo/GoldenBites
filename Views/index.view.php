@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,7 @@
 
             <form name="frmLogin" method="post">
             <div class="divimage">
-            <img src="images/logo2.png" alt="MAR logo" class="logo">
+            <img src="images/Logo2.png" alt="MAR logo" class="logo">
             </div>
             <h1>Log in</h1> 
             <hr>   
@@ -33,11 +36,9 @@
     </body>
 </html>
 
+
 <?php
 
-?>
-<?php
-session_start();
 
 include 'db_connect.php';
 //Verify user and password
@@ -56,7 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['Name']=$row['Name'];
         $_SESSION['RoomNumber']=$row['RoomNumber'];
         $_SESSION['email']=$row['email'];
-        header('Location: /home');
+        //header('Location: /home');
+        echo "<script>window.location.href = '/home?id=$row[ID]';</script>";
     } else {
         $mensaje_error = "Usuario y/o contraseña incorrectos.";
         echo "<script>alert('Incorrect username and/or password, please try again.');</script>";

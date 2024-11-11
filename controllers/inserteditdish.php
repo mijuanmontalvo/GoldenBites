@@ -10,13 +10,13 @@ $price = $_POST['price'];
  if (empty($_FILES['image_dish']['name'])){
 
     echo "la imagen es cero";
-    $sql = "UPDATE goldenbites.dish 
+    $sql = "UPDATE dish 
     SET Name='$name', Description='$description', Price=$price
     WHERE ID=$ID";
 
 }else{
     $image_dish = addslashes(file_get_contents($_FILES['image_dish']['tmp_name']));
-    $sql = "UPDATE goldenbites.dish 
+    $sql = "UPDATE dish 
     SET Name='$name', Description='$description', Price=$price, Image='$image_dish'
     WHERE ID=$ID";  
 }
@@ -25,7 +25,8 @@ $price = $_POST['price'];
 
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: /ourdishes");
+    //header("Location: /ourdishes");
+    echo "<script>window.location.href = '/ourdishes';</script>";
     echo "exito";
     exit();
   } else {

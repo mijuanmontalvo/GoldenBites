@@ -147,7 +147,7 @@
 <div class="login-container">
     <form name="frmRegister" action="/controllers/insertar_cuenta.php" method="post" onsubmit="return validateForm()">
         <div class="divimage">
-            <img src="images/logo2.png" alt="Logo GoldenBites" class="logo">
+            <img src="images/Logo2.png" alt="Logo GoldenBites" class="logo">
         </div>
         <h1>Register account</h1> 
         <hr>   

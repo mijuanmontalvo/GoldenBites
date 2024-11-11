@@ -30,7 +30,8 @@ $sql = "INSERT INTO user (UserType, Name, RoomNumber, email, UserName, Password)
 
 if ($conn->query($sql) === TRUE) {
     $_SESSION['name_usuario'] = $name_usuario;
-    header("Location: /");
+    //header("Location: /");
+    echo "<script>window.location.href = '/';</script>";
     exit();
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

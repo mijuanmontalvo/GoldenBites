@@ -5,7 +5,7 @@ $heading2 = "You can make a reservation for our food or review your reservations
 
 
 if ($_SESSION['UserType']=="Kitchen"){
-    require "views/reservation.kitchen.view.php"; 
+    require "Views/reservation.kitchen.view.php"; 
 } else if($_SESSION['UserType']=="Guest"){
-    require "views/reservation.guest.view.php"; 
+    require "Views/reservation.guest.view.php"; 
 }

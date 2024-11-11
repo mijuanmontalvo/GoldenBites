@@ -16,12 +16,13 @@ echo $reservation_date."--";
 echo $number_dishes."--";
 echo $observation;
 
-$sql = "UPDATE goldenbites.reservation 
+$sql = "UPDATE reservation 
         SET DishID='$dishID', DateReservation='$reservation_date', NumberDish=$number_dishes,
             Observation='$observation'
         WHERE ID=$ID";  
 if ($conn->query($sql) === TRUE) {
-    header("Location: /reservation");
+    //header("Location: /reservation");
+    echo "<script>window.location.href = '/reservation';</script>";
     echo "exito";
     exit();
   } else {
