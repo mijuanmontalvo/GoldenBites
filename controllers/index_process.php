@@ -9,7 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($username === $usuario_valido && $password === $contrasena_valida) {
         
-        header("Location: home");
+        //header("Location: home");
+        echo "<script>window.location.href = '/home';</script>";
         exit;
     } else {
         

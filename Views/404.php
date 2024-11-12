@@ -5,7 +5,7 @@
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 trips">
       <p class="text-2xl font-bold">Sorry. Page not found</p>
       <p class="mt-4">
-        <a href="/home" class="text-blue underline">Go back home.</a>
+        <a href="/" class="text-blue underline">Go back home.</a>
       </p>
     </div>
   </main>

@@ -8,7 +8,7 @@
 <?php 
 include 'db_connect.php';
 
-
+//query to delete dish in database
 $sql = "DELETE FROM dish where ID=$ID";
 $result = $conn->query($sql);
 

@@ -1,7 +1,6 @@
 <?php
 session_start();
-include '../functions.php';
-$conn = conectarBD();
+include 'db_connect.php';
 
 $userID=$_SESSION['ID'];
 
@@ -11,11 +10,12 @@ $number_dishes = $_POST['number_dishes'];
 $observation = $_POST['observation'];
 $estate="Initialized";
 
-$sql = "INSERT INTO goldenbites.reservation (UserID, DishID, DateReservation, NumberDish, Observation, Estate) 
+$sql = "INSERT INTO reservation (UserID, DishID, DateReservation, NumberDish, Observation, Estate) 
         values('$userID','$name_dish','$reservation_date','$number_dishes','$observation','$estate')";
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: /reservationsmade");
+    //header("Location: /reservation");
+    echo "<script>window.location.href = '/reservation';</script>";
     exit();
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

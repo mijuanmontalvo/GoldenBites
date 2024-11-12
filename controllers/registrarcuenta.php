@@ -1,4 +1,4 @@
 <?php
 
 $heading = "Home";
-require "views/registrarcuenta.view.php";
+require "Views/registrarcuenta.view.php";
