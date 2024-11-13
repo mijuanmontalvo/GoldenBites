@@ -64,3 +64,7 @@ This project is licensed under the MIT License. For more details in [LICENSE.md]
 ## Basic Contribution Guidelines
 
 Contributions are welcome. If you have any ideas or improvements, you can fork the repository and submit a pull request, more information in [CONTRIBUTING.md](/CONTRIBUTING.md) 
+
+## Personal learning objetives
+
+To develop this project, I have carried out a short investigation on the different data models (database) and which is the best option for this application, in the following link you can see details of this research [Personal learning objetives](https://github.com/mijuanmontalvo/GoldenBites/wiki/PERSONAL-LEARNING-OBJETIVES)
