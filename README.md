@@ -30,6 +30,13 @@ Building a web application where residents can generate orders that include spec
 
 **Note**: For the construction of this web application, XAMPP has been used, which is a free software package that provides a local server development environment. Its name is an acronym that represents its main components: X (multiplatform), Apache (web server), MySQL/MariaDB (database manager), PHP (programming language), and Perl (programming language). This package facilitates the configuration of a local server for the development of web applications, since it includes all the necessary tools in a single installation. XAMPP is widely used by developers looking for a simple and efficient environment to develop web applications locally.
 
+## Database Schema
+The main tables used in the database include:
+
+Users: Information about kitchen and guest user.
+Dish: Information about dishes.
+Resevation: Information about reservations.
+
 
 ## Installation Steps
 
