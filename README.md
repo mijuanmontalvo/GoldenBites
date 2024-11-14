@@ -77,6 +77,6 @@ To develop this project, I have carried out a short investigation on the differe
 
 ##  Task list 
 
-To develop this project, a task list was created in a {github project](https://github.com/users/mijuanmontalvo/projects/10/views/1)
+To develop this project, a task list was created in a [github project](https://github.com/users/mijuanmontalvo/projects/10/views/1)
 
 
