@@ -33,9 +33,9 @@ Building a web application where residents can generate orders that include spec
 ## Database Schema
 The main tables used in the database include:
 
-Users: Information about kitchen and guest user.
-Dish: Information about dishes.
-Resevation: Information about reservations.
+- **Users:** Information about kitchen and guest user.
+- **Dish:** Information about dishes.
+- **Resevation:** Information about reservations.
 
 
 ## Installation Steps
