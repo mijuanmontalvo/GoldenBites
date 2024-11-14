@@ -75,3 +75,8 @@ I have developed this project with HTML, CSS, PHP, JavaScript and MySQL. During 
 To develop this project, I have carried out a short investigation on the different data models (database) and which is the best option for this application, in the following link you can see details of this research [Personal learning objetives](https://github.com/mijuanmontalvo/GoldenBites/wiki/PERSONAL-LEARNING-OBJETIVES)
 
 
+##  Task list 
+
+To develop this project, a task list was created in a {github project](https://github.com/users/mijuanmontalvo/projects/10/views/1)
+
+
