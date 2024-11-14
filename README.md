@@ -60,6 +60,8 @@ With the server running and the database set up, navigate to `http://localhost:3
 
 **Note**: Once the application is loaded on the PC it will be possible to use the web application or it will be possible to update the code (HTML, PHP, CSS, MySQL) to make improves.
 
+To use the application, it is necessary to review the user manual, since this document details trial users and passwords [user manual](/Manuals/Usermanual.pdf).
+
 ## Usage Instructions
 
 Once the application is loaded and installed it will be possible to use it, check the [user manual](/Manuals/Usermanual.pdf).
