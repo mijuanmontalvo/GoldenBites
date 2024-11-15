@@ -30,6 +30,83 @@ Building a web application where residents can generate orders that include spec
 
 **Note**: For the construction of this web application, XAMPP has been used, which is a free software package that provides a local server development environment. Its name is an acronym that represents its main components: X (multiplatform), Apache (web server), MySQL/MariaDB (database manager), PHP (programming language), and Perl (programming language). This package facilitates the configuration of a local server for the development of web applications, since it includes all the necessary tools in a single installation. XAMPP is widely used by developers looking for a simple and efficient environment to develop web applications locally.
 
+## Project structure
+
+```
+    └── 📁controllers
+        └── addnewdish.php
+        └── deletedish.php
+        └── deletereservation.php
+        └── editdish.php
+        └── editreservation.php
+        └── home.php
+        └── index_process.php
+        └── index.php
+        └── insertar_cuenta.php
+        └── insertar_reservation.php
+        └── inserteditdish.php
+        └── inserteditreservation.php
+        └── insertnewdish.php
+        └── makereservation.php
+        └── makereservationfromdish.php
+        └── manageourdishes.php
+        └── ourdishes.php
+        └── registrarcuenta.php
+        └── reservation.php
+        └── reservationkitchen.php
+        └── reservationsmade.php
+    └── 📁css
+        └── base.css
+        └── style.css
+    └── 📁Database
+        └── goldenbites.sql
+    └── 📁images
+        └── Dish1.png
+        └── Dish2.png
+        └── Dish3.png
+        └── Dish4.png
+        └── Dish5.png
+        └── Dish6.png
+        └── Dishcard1.png
+        └── Homepage.png
+        └── Logo2.png
+        └── Reservationcard1.png
+    └── 📁Manuals
+        └── Usermanual.pdf
+    └── 📁Views
+        └── 📁partials
+            └── banner.php
+            └── footer.contact.php
+            └── footer.php
+            └── head.php
+            └── nav.php
+        └── 404.php
+        └── addnewdish.view.php
+        └── deletedish.view.php
+        └── deletereservation.view.php
+        └── editdish.view.php
+        └── editreservation.view.php
+        └── home.view.php
+        └── index.view.php
+        └── makereservation.view.php
+        └── makereservationfromdish.view.php
+        └── manageourdishes.view.php
+        └── ourdishes.guest.view.php
+        └── ourdishes.kitchen.view.php
+        └── registrarcuenta.view.php
+        └── reservation.guest.view.php
+        └── reservation.kitchen.view.php
+        └── reservationsmade.view.php
+    └── .htaccess
+    └── CONTRIBUTING.md
+    └── db_connect.php
+    └── functions.php
+    └── index.php
+    └── LICENSE.md
+    └── README.md
+    └── router.php
+```
+
 ## Database Schema
 The main tables used in the database include:
 
