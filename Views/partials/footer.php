@@ -1,15 +1,25 @@
+<!-- Footer -->
 <footer class="footerWrap">
   <div class="footerContent">
     <p>&copy; 2024 Golden Bites. All Rights Reserved.</p>
     <p>Email: <a href="mailto:contact@goldenbites.com">contact@goldenbites.com</a></p>
-    <p>Phome number: 250 250 250</p>
+    <p>Phone number: 250 250 250</p>
     <div class="socialLinks">
-      <a href="https://www.facebook.com" target="_blank" class="socialIcon">Facebook</a>
-      <a href="https://www.twitter.com" target="_blank" class="socialIcon">Twitter</a>
-      <a href="https://www.instagram.com" target="_blank" class="socialIcon">Instagram</a>
+      <a href="https://www.facebook.com" target="_blank" class="socialIcon" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" class="socialIcon" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" class="socialIcon" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
     </div>
   </div>
 </footer>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 
 </body>
@@ -47,13 +57,18 @@
 }
 
 .socialIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
   color: #fff;
-  padding: 0.5rem;
+  font-size: 24px;
   background-color: #223054;
-  border-radius: 5px;
+  border-radius: 50%;
   box-shadow: 0 0 5px #13b1e7;
   text-decoration: none;
-  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
 .socialIcon:hover {
@@ -69,10 +84,7 @@
     text-align: center;
   }
   
-  .socialLinks {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+
 }
 
 
