@@ -103,6 +103,12 @@ function validateForm() {
         return false;
     }
 
+    const confirmMessage = "Do you want to confirm this reservation?";
+    if (!confirm(confirmMessage)) {
+        // Cancel submission if user does not confirm
+        return false;
+    }
+
     return true;
 }
 </script>
