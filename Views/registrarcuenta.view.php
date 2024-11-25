@@ -114,6 +114,15 @@
 
 
         }
+
+            // Show confirmation message
+            const confirmMessage = "Do you want to confirm the creation of this account?";
+
+    if (!confirm(confirmMessage)) {
+        // Cancel submission if user does not confirm
+        return false;
+    }
+
             
             // If all validations pass.
             return true;
