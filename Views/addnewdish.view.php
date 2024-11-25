@@ -81,6 +81,23 @@ function validateForm() {
         }
     }
 
+        // Show confirmation message
+        const confirmMessage = "Do you want to confirm the creation of this dish?";
+   /* const confirmMessage = "Reservation Summary:\n\n" +
+        "Dish: ${selectedDishName}\n" +
+        "Date and Time: ${reservationDate}\n" +
+        "Number of Dishes: ${numberDishes}\n" +
+        "Observation: ${observation || 'None'}\n\n" +
+        "Do you want to confirm this reservation?";*/
+
+
+    if (!confirm(confirmMessage)) {
+        // Cancel submission if user does not confirm
+        return false;
+    }
+
+
+
     // If all validations pass, the form is allowed to be submitted.
     return true;
 }

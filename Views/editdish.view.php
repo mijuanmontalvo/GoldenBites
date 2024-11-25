@@ -99,6 +99,24 @@ function validateForm() {
     // Validate that the 'Dish image' field is not empty and is of image type
     if (imageDish === "") {
         
+
+            // Show confirmation message
+            const confirmMessage = "Do you want to confirm the edition of this dish?";
+   /* const confirmMessage = "Reservation Summary:\n\n" +
+        "Dish: ${selectedDishName}\n" +
+        "Date and Time: ${reservationDate}\n" +
+        "Number of Dishes: ${numberDishes}\n" +
+        "Observation: ${observation || 'None'}\n\n" +
+        "Do you want to confirm this reservation?";*/
+
+
+    if (!confirm(confirmMessage)) {
+        // Cancel submission if user does not confirm
+        return false;
+    }
+
+
+
         return true;
     } else {
         const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
@@ -107,6 +125,23 @@ function validateForm() {
             return false;
         }
     }
+
+
+            // Show confirmation message
+            const confirmMessage = "Do you want to confirm the edition of this dish?";
+   /* const confirmMessage = "Reservation Summary:\n\n" +
+        "Dish: ${selectedDishName}\n" +
+        "Date and Time: ${reservationDate}\n" +
+        "Number of Dishes: ${numberDishes}\n" +
+        "Observation: ${observation || 'None'}\n\n" +
+        "Do you want to confirm this reservation?";*/
+
+
+    if (!confirm(confirmMessage)) {
+        // Cancel submission if user does not confirm
+        return false;
+    }
+
 
     // If all validations pass, the form is allowed to be submitted.
     return true;
