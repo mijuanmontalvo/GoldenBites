@@ -166,3 +166,12 @@ To develop this project, I have carried out a short investigation on the differe
 To develop this project, a task list was created in a [github project](https://github.com/users/mijuanmontalvo/projects/10/views/1)
 
 
+## User testing report
+
+In order to verify the correct functioning of the web application, a user testing report was made, more details [here](https://github.com/mijuanmontalvo/GoldenBites/wiki/User-testing-report).
+
+
+## Challenges and learnings
+
+During the construction of this project, challenges and lessons were encountered. More details [here](https://github.com/mijuanmontalvo/GoldenBites/wiki/Challenges-and-learnings).
+
